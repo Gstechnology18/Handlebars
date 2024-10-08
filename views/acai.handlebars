@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dia do Vitinho</title>
-</head>
-<body>
-    {{body}}
-</body>
-</html>
+<h1>Olá {{user.name}} seja bem-vindo à página</h1>
+{{#if approved}}
+<p>Parabéns você foi cadastrado!</p>
+{{else}}
+<p>Deu ruim! Dados incorretos</p>
+{{/if}}
+{{#if auth}}
+<p>
+    Você está autenticado,  <a href="./peixe">clique aqui</a> para acessar 
+    área de hóspedes.
+</p>
+
+{{/if}}
